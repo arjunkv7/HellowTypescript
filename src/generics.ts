@@ -17,3 +17,14 @@ interface User {
 }
 let user:User = identityTwo<User>({name:'Arjun',age:21});
 console.log(user);
+
+//gereric function
+function getIndex<T>(items: T[]):T {
+    let index = 5;
+    return items[index]
+}
+
+let getLastUser = <User>(users:Array<User>): User => {
+    let lastUser = users.pop()!;
+    return lastUser;
+}
